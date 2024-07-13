@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:19:00 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:56:05 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:49:35 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

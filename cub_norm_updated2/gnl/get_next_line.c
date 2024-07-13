@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:19:10 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:56:22 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:48:36 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 static char	*make_line2(char *b, char **line)
-{	
+{
 	char	*line2;
 	int		j;
 	int		i;

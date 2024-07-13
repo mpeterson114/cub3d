@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:21:01 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 09:13:53 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:49:20 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 #  define BUFFER_SIZE 1
 # endif
 
-int	    ft_strlen_n(char *s, int j, int *i);
+int		ft_strlen_n(char *s, int j, int *i);
 char	*free_memory(char **line);
 char	*get_next_line(int fd);
 
