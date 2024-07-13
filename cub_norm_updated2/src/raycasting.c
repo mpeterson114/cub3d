@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:41:05 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:55:36 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:24:34 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	calculate_next_ray_step(t_program *cub, t_ray *r)
 		r->hor_dist = INFINITY;
 }
 
-static float	calculate_wall_txt(t_program *cub, float dist, int color_idx, float w)
+static float	calc_wt(t_program *cub, float dist, int color_idx, float w)
 {
 	cub->txt_idx = color_idx;
 	cub->txt_w = w;
@@ -70,14 +70,14 @@ float	find_nearest_wall_distance(t_program *cub, float current_angle)
 		if (r.vert_dist < r.hor_dist)
 		{
 			if (cub->map[(int)r.vert_y][(int)r.vert_x + (r.sx - 1) / 2] == '1')
-				return (calculate_wall_txt(cub, r.vert_dist, r.sx + 1, r.vert_w));
+				return (calc_wt(cub, r.vert_dist, r.sx + 1, r.vert_w));
 			else
 				r.vert_x += r.sx;
 		}
 		else
 		{
 			if (cub->map[(int)r.hor_y + (r.sy - 1) / 2][(int)r.hor_x] == '1')
-				return (calculate_wall_txt(cub, r.hor_dist, r.sy + 2, r.hor_w));
+				return (calc_wt(cub, r.hor_dist, r.sy + 2, r.hor_w));
 			else
 				r.hor_y += r.sy;
 		}
@@ -95,7 +95,8 @@ void	raycasting(t_program *cub)
 	x = -1;
 	while (++x < WIN_WIDTH)
 	{
-		render_vertical_line(cub, x, find_nearest_wall_distance(cub, current_angle) * cos(cub->angle_view - current_angle));
+		render_vl(cub, x, find_nearest_wall_distance(cub, current_angle) \
+			* cos(cub->angle_view - current_angle));
 		current_angle += angle_step;
 	}
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/13 09:45:30 by mpeterso          #+#    #+#             */
+/*   Updated: 2024/07/13 10:12:54 by mpeterso         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "cub3d.h"
 
 void	free_all(t_program *cub)
@@ -24,7 +36,8 @@ static void	error_exit2(int i)
 	else if (i == 13)
 		ft_putstr_fd("Error\nFile cannot be opened\n", 2);
 	else if (i == 14)
-		ft_putstr_fd("Error\nInvalid line distribution (ex: Empty line in map, texture lines duplicated or out of place)\n", 2);
+		ft_putstr_fd("Error\nInvalid line distribution (ex: Empty line in map,\
+		 texture lines duplicated or out of place)\n", 2);
 	else if (i == 15)
 		ft_putstr_fd("Error\nInvalid character found in map\n", 2);
 }
@@ -32,7 +45,8 @@ static void	error_exit2(int i)
 void	error_exit(t_program *cub, int i)
 {
 	if (i == 1)
-		ft_putstr_fd("Error\nInvalid # of args (ex: ./cub3d maps/<map of choice>)\n", 2);
+		ft_putstr_fd("Error\nInvalid # of args \
+		(ex: ./cub3d maps/<map of choice>)\n", 2);
 	else if (i == 2)
 		ft_putstr_fd("Error\nMap file must be of type \".cub\"\n", 2);
 	else if (i == 3)
@@ -40,13 +54,13 @@ void	error_exit(t_program *cub, int i)
 	else if (i == 4)
 		ft_putstr_fd("Error\nMemory allocation error\n", 2);
 	else if (i == 5)
-		ft_putstr_fd("Error\nValues of color [0,255] or not correct dates\n", 2);
+		ft_putstr_fd("Error\nIncorrect color values (range: [0,255]\n", 2);
 	else if (i == 6)
-		ft_putstr_fd("Error\nCheck parametres -> NO, SO, WE, EA, C, F\n", 2);
+		ft_putstr_fd("Error\nCheck parameters -> NO, SO, WE, EA, C, F\n", 2);
 	else if (i == 7)
 		ft_putstr_fd("Error\nMap not valid\n", 2);
 	else if (i == 8)
-		ft_putstr_fd("Error\nInvalid player amount: Map must have 1 player \'S W E N\'\n", 2);
+		ft_putstr_fd("Error\nMap must have 1 player \'S W E N\'\n", 2);
 	else if (i == 9)
 		ft_putstr_fd("Error\nNot valid ending map\n", 2);
 	else if (i == 10)

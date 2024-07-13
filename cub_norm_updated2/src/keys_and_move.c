@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 15:31:44 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:54:42 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:22:48 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void	move_player(t_program *cub, int direction)
 	dist = find_nearest_wall_distance(cub, calc_sign(dy) * M_PI / 2);
 	if (dist * dist < dy * dy)
 		dy = 0.0f;
-	dist = find_nearest_wall_distance(cub, (1 - (calc_sign(dx) + 1) / 2) * M_PI);
+	dist = find_nearest_wall_distance(cub, (1 - (calc_sign(dx) + 1) / 2)
+			* M_PI);
 	if (dist * dist < dx * dx)
 		dx = 0.0f;
 	cub->pos_x += dx;
@@ -62,8 +63,8 @@ int	cleanup_and_exit(t_program *cub)
 		mlx_destroy_window(cub->mlx, cub->win);
 	i = -1;
 	while (++i < 4)
-		if (cub->textures[i].img)
-			mlx_destroy_image(cub->mlx, cub->textures[i].img);
+		if (cub->txt[i].img)
+			mlx_destroy_image(cub->mlx, cub->txt[i].img);
 	free_all(cub);
 	exit(0);
 }

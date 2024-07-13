@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 20:14:51 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:54:33 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:27:00 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	find_position(t_program *cub)
 	int	j;
 
 	i = -1;
-
 	while (++i < cub->only_map_h)
 	{
 		j = -1;
@@ -54,18 +53,19 @@ void	txt_initialisation(t_program *cub)
 	i = -1;
 	while (++i < 4)
 	{
-		cub->textures[i].img = mlx_xpm_file_to_image(cub->mlx,
-				cub->path_nswe[i], &cub->textures[i].width, &cub->textures[i].height);
-		if (!cub->textures[i].img)
+		cub->txt[i].img = mlx_xpm_file_to_image(cub->mlx,
+				cub->path_nswe[i], &cub->txt[i].width, \
+				&cub->txt[i].height);
+		if (!cub->txt[i].img)
 		{
 			ft_putstr_fd("Error:\nCan not read the texture '", 2);
 			ft_putstr_fd(cub->path_nswe[i], 2);
 			ft_putstr_fd("'\n"N, 2);
 			cleanup_and_exit(cub);
 		}
-		cub->textures[i].addr = mlx_get_data_addr(cub->textures[i].img,
-				&cub->textures[i].bits_per_pixel, &cub->textures[i].line_length,
-				&cub->textures[i].endian);
+		cub->txt[i].addr = mlx_get_data_addr(cub->txt[i].img,
+				&cub->txt[i].bits_per_pixel, &cub->txt[i].line_length,
+				&cub->txt[i].endian);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 11:58:08 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:52:23 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:27:19 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ void	init_struct(t_program *cub)
 {
 	int	i;
 
-	cub->color_ceiling = -1; 
+	cub->color_ceiling = -1;
 	cub->color_floor = -1;
 	cub->only_map_h = 0;
 	i = -1;
 	while (++i < 4)
 	{
-		cub->path_nswe[i] = NULL; 
-		cub->textures[i].img = NULL;
+		cub->path_nswe[i] = NULL;
+		cub->txt[i].img = NULL;
 	}
 	cub->map = NULL;
 	cub->win = NULL;

@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/29 20:13:54 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:53:39 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:25:37 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,13 @@
 
 enum e_identifiers
 {
-    NO,
-    SO,
-    WE,
-    EA,
-    F,
-    C,
-    ERROR
+	NO,
+	SO,
+	WE,
+	EA,
+	F,
+	C,
+	ERROR
 };
 
 typedef struct s_rgb
@@ -83,11 +83,11 @@ typedef struct s_rgb
 
 typedef struct s_img
 {
-	void	*img; 
-	char	*addr; 
-	int		bits_per_pixel; 
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
 	int		line_length;
-	int		endian; 
+	int		endian;
 	int		width;
 	int		height;
 }	t_img;
@@ -111,7 +111,7 @@ typedef struct s_program
 	void	*mlx;
 	void	*win;
 	t_img	img;
-	t_img	textures[4];
+	t_img	txt[4];
 }	t_program;
 
 typedef struct s_ray
@@ -136,12 +136,14 @@ typedef struct s_ray
 # define LINEAR_STEP	0.3f
 # define FOV			1.047f
 
-enum {
-	ON_KEYDOWN = 2, 
-	ON_DESTROY = 17 
+enum
+{
+	ON_KEYDOWN = 2,
+	ON_DESTROY = 17
 };
 
-enum {
+enum
+{
 	NoEventMask = 0L,
 	KeyPressMask = 1L<<0,
 	KeyReleaseMask = 1L<<1,
@@ -178,28 +180,19 @@ int			ft_get_matrix_size(char **matrix);
 int			ft_longest_line(char **matrix);
 int			my_atoi(t_program *game, char *str);
 int			ft_get_matrix_size(char **matrix);
-
 void		parser(char **argv, t_program *cub);
 char		**read_file(char **argv, t_program *cub);
-
-void    	map_values(t_program *cub, char **contents);
+void		map_values(t_program *cub, char **contents);
 void		check_walls(t_program *cub, char **map);
-
-
 void		find_position(t_program *game);
 void		txt_initialisation(t_program *game);
 void		start_game(t_program *game);
-
-void		render_vertical_line(t_program *game, int w, float dist);
+void		render_vl(t_program *game, int w, float dist);
 void		render_scene(t_program *game);
-
 float		find_nearest_wall_distance(t_program *game, float v);
 void		raycasting(t_program *game);
-
 void		move_player(t_program *game, int direction);
 int			keys(int keycode, t_program *game);
 int			cleanup_and_exit(t_program *game);
-
-
 
 #endif

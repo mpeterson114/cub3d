@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:28:06 by ilzhabur          #+#    #+#             */
-/*   Updated: 2024/07/13 08:44:49 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:24:05 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,30 +26,32 @@ static void	draw_ceiling_floor(t_program *cub)
 		*image_ptr++ = cub->color_floor;
 }
 
-void	render_vertical_line(t_program *cub, int image_column, float dist)
+void	render_vl(t_program *cub, int image_column, float dist)
 {
 	unsigned int	*image_ptr;
 	unsigned int	*texture_ptr;
 	unsigned int	h;
-	float			txt_start_point;
+	float			txt_sp;
 	float			txt_increment;
 
 	h = (float) WIN_HEIGHT / dist;
-	txt_start_point = 0.0f;
-	txt_increment = (float) cub->textures[cub->txt_idx].height / h;
+	txt_sp = 0.0f;
+	txt_increment = (float) cub->txt[cub->txt_idx].height / h;
 	if (h > WIN_HEIGHT)
 	{
-		txt_start_point = 0.5f * (h - WIN_HEIGHT) / h * cub->textures[cub->txt_idx].height;
+		txt_sp = 0.5f * (h - WIN_HEIGHT) / h * cub->txt[cub->txt_idx].height;
 		h = WIN_HEIGHT;
 	}
-	texture_ptr = (unsigned int *) cub->textures[cub->txt_idx].addr;
-	texture_ptr += (int)((float) cub->txt_w * cub->textures[cub->txt_idx].width);
-	image_ptr = (unsigned int *) cub->img.addr + image_column + (WIN_HEIGHT - h) / 2 * WIN_WIDTH;
+	texture_ptr = (unsigned int *) cub->txt[cub->txt_idx].addr;
+	texture_ptr += (int)((float) cub->txt_w * cub->txt[cub->txt_idx].width);
+	image_ptr = (unsigned int *) cub->img.addr + image_column \
+		+ (WIN_HEIGHT - h) / 2 * WIN_WIDTH;
 	while (h-- > 0)
 	{
-		*image_ptr = *(texture_ptr + ((int)txt_start_point) * cub->textures[cub->txt_idx].width);
+		*image_ptr = *(texture_ptr + ((int)txt_sp) * \
+				cub->txt[cub->txt_idx].width);
 		image_ptr += WIN_WIDTH;
-		txt_start_point += txt_increment;
+		txt_sp += txt_increment;
 	}
 }
 
