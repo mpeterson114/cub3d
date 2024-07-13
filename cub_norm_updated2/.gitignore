@@ -1,0 +1,6 @@
+*.dsYM
+a.out
+.DS_Store
+*.o
+*.a
+venv
