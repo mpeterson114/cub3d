@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:39:19 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 13:04:27 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:58:48 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(dst, s1, len);
 	return (dst);
 }
-

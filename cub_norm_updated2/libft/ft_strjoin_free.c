@@ -1,8 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/13 09:58:09 by ilzhabur          #+#    #+#             */
+/*   Updated: 2024/07/13 09:58:20 by ilzhabur         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/* Concatenates the given strings 's1' and 's2'and allocates sufficient memory 
-	for the newly created string. Frees s1. Returns a pointer to the new combined string, 
-	or NULL if memory allocation fails */
+#include "libft.h"
 
 char	*ft_strjoin_free(char *s1, char *s2)
 {
@@ -22,7 +30,7 @@ char	*ft_strjoin_free(char *s1, char *s2)
 	{
 		new_str[i] = s1[i];
 		i++;
-	}	
+	}
 	j = 0;
 	while (s2[j] != '\0')
 		new_str[i++] = s2[j++];

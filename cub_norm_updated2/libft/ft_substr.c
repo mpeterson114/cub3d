@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:07:02 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/27 10:27:29 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:56:10 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Extracts a substring starting at index 'start' and ending at 'len' from the given 
-	string 's'. It allocates sufficient memory for the extracted string, then returns a pointer
-	to it. */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:51:59 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/28 11:32:02 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:59:26 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Copies 'n' bytes from the byte string 'src' to the byte string 'dst'.
-	Does not control for memory overlaps (use ft_memmove in this case).
-	Returns a pointer to the modified 'dst' */ 
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

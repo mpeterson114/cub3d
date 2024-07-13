@@ -3,23 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 13:10:48 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 12:11:43 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:10:09 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Checks whether the value of 'c' is alphanumeric */
-
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'))
-	{
+	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
-	}
 	return (0);
 }

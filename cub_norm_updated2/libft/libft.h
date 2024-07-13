@@ -6,7 +6,7 @@
 /*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:43:00 by mpeterso          #+#    #+#             */
-/*   Updated: 2024/06/16 15:42:48 by ilzhabur         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:55:48 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-// int		ft_strisnum(char *c);
-int 	ft_isnum_str(char *s);
+int		ft_isnum_str(char *s);
 int		ft_get_matrix_size(char **matrix);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);

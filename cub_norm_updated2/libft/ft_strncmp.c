@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:56:46 by mpeterso          #+#    #+#             */
-/*   Updated: 2024/07/11 12:38:51 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:57:32 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Compares the first 'n' bytes of the given strings 's1' and 's2'
-	Returns 0 if the two strings are identical, otherwise returns the 
-	difference between the first two differing bytes (treated as unsigned char) */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:57:31 by mpeterso          #+#    #+#             */
-/*   Updated: 2024/05/12 19:03:20 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:58:38 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		new_str[i] = s1[i];
 		i++;
-	}	
+	}
 	j = 0;
 	while (s2[j] != '\0')
 		new_str[i++] = s2[j++];

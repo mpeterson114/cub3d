@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 13:05:56 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/26 11:50:01 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 10:01:07 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,3 @@ int	ft_isdigit(int c)
 	}
 	return (0);
 }
-

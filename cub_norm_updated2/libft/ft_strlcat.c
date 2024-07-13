@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ilzhabur <ilzhabur@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:53:30 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/27 10:33:11 by mpeterso         ###   ########.fr       */
+/*   Updated: 2024/07/13 09:57:54 by ilzhabur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Appends the given string 'src' to the end of 'dst'. It will append at most dstsize - ft_strlen(dst) - 1 and 
-	null-terminate the result. */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
