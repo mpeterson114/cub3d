@@ -1,13 +1,44 @@
 
-NAME	=	cub3D
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/05/18 18:25:20 by ilzhabur          #+#    #+#              #
+#    Updated: 2024/07/12 14:12:48 by mpeterso         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-CFLAGS	=	-Wall -Wextra -Werror -g3
-CC		=	cc
+ORANGE =		\033[38;5;209m
+PURPLE=			\033[0;35m
+YELLOW =		\033[0;93m
+GREEN =			\033[0;92m
+WHITE =			\033[0;37m
 
-LIBDIR	=	libft
-LIBFT	=	libft.a
+NAME = cub3d
 
-UNAME	=	$(shell uname)
+SRC = src/main.c \
+		src/parser.c \
+		src/utils.c \
+		src/read_file.c \
+		src/map_values.c \
+		src/check_walls.c \
+		#src/game.c \
+		src/player.c \
+		src/rendering.c \
+		src/raycasting.c \
+		src/screen_utils.c
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+
+LIBDIR = libft/
+LIBNAME = libft.a
+LIBFT = $(LIBDIR)$(LIBNAME)
+
+UNAME = $(shell uname)
 ifeq ($(UNAME),Linux)
 	MINDIR	= 	mlx_linux
 	MINLIBX	=	libmlx.a
